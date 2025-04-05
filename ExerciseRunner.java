@@ -1,7 +1,7 @@
 public class ExerciseRunner {
     public static void main(String []arg) {
-        System.out.println(StringContains.isStringContainedIn("Hell", "Highway to Hell"));
-        System.out.println(StringContains.isStringContainedIn("Hell", "Hello World !"));
-        System.out.println(StringContains.isStringContainedIn("Bonjour", "hello World !"));
+        System.out.println(StringReplace.replace("javatpoint is a very good website", 'a', 'e'));
+        System.out.println(StringReplace.replace("my name is khan my name is java", "is","was"));
+        System.out.println(StringReplace.replace("hey i'am java", "I'am","was"));
     }
 }
