@@ -1,6 +1,6 @@
-IterativeFactorial.class
-RecursiveFactorial.class
-FactorialMasterTest.class
+DoubleLinkedListTest.class
+DoubleLinkedList$Node.class
 ExerciseRunner.class
-Factorial.class
+DoubleLinkedList.class
 StopAfterFailureExtension.class
+LinkedList.class
