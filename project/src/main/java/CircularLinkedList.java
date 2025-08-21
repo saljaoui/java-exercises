@@ -19,12 +19,11 @@ public class CircularLinkedList implements LinkedList {
 
     @Override
     public int at(int index) {
-        if (index < 0 || index >= size) {
-            return -1;
-        }
+        // if (index < 0) {
+        //     return -1;
+        // }
 
         if (index == 0) {
-            System.out.print("Go to next node\n");
             return this.head.value;
         }
 
@@ -32,7 +31,7 @@ public class CircularLinkedList implements LinkedList {
         for (int i = 0; i < index; i++){
             currecnt = next(currecnt);
         }
-
+        
         return currecnt.value;
     }
 
@@ -45,8 +44,7 @@ public void add(int value) {
         newNode.next = this.head;
     } else {
         Node tail = this.head;
-        // Move (size - 1) times to reach the last node (so we call next() exactly once per step)
-        for (int i = 0; i < this.size - 1; i++) {
+        while (tail.next != head) {
             tail = next(tail);
         }
         tail.next = newNode;
@@ -57,9 +55,6 @@ public void add(int value) {
 
     @Override
 public void remove(int index) {
- if (this.size == 0 || index < 0) {
-        return ;
-    }
 
     if (index == 0) {
         Node tail = head;
