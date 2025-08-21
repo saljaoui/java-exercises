@@ -26,17 +26,8 @@ public class DoubleLinkedList implements LinkedList {
         if (index < 0 || index >= size) {
             return -1;
         }
-        
-        if (index == 0) {
-            return head.value;
-        }
-        
-        if (index == size - 1) {
-            return tail.value;
-        }
-        
+
         Node current;
-       
         if (index < (size + 1) / 2) {
             current = head;
             for (int i = 0; i < index; i++) {
@@ -72,11 +63,8 @@ public class DoubleLinkedList implements LinkedList {
         }
         
         Node nodeToRemove;
-        if (index == 0) {
-            nodeToRemove = head;
-        } else if (index == size - 1) {
-            nodeToRemove = tail;
-        } else {
+
+        
             if (index < (size + 1) / 2) {
                 nodeToRemove = head;
                 for (int i = 0; i < index; i++) {
@@ -88,7 +76,7 @@ public class DoubleLinkedList implements LinkedList {
                     nodeToRemove = prev(nodeToRemove);
                 }
             }
-        }
+        
         
         if (nodeToRemove.prev != null) {
             nodeToRemove.prev.next = nodeToRemove.next;
