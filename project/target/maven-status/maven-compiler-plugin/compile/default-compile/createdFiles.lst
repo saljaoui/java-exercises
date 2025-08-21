@@ -1,6 +1,6 @@
-CircularLinkedList$Node.class
+SingleLinkedListTest.class
+SingleLinkedList$Node.class
 ExerciseRunner.class
-CircularLinkedListTest.class
-CircularLinkedList.class
 LinkedList.class
+SingleLinkedList.class
 StopAfterFailureExtension.class

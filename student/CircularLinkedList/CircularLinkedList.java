@@ -54,10 +54,7 @@ public void add(int value) {
 public void remove(int index) {
 
     if (index == 0) {
-        Node tail = head;
-        while (next(tail) != head) {
-            tail = next(tail);
-        }
+        Node tail = head.next;
         head = head.next;
         tail.next = head;
     } else {

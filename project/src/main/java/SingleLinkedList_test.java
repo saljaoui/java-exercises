@@ -9,14 +9,14 @@ import java.io.PrintStream;
 import org.junit.jupiter.api.extension.ExtendWith;
 
 @ExtendWith(StopAfterFailureExtension.class)
-class CircularLinkedListTest {
+class SingleLinkedListTest {
     private LinkedList list;
     private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
     private final PrintStream originalOut = System.out;
 
     @BeforeEach
     void setUp() {
-        list = new CircularLinkedList();
+        list = new SingleLinkedList();
         System.setOut(new PrintStream(outContent));
     }
 
@@ -161,15 +161,9 @@ class CircularLinkedListTest {
         assertThat(list.size())
                 .withFailMessage("Expected size 2 after removing head but got %d", list.size())
                 .isEqualTo(2);
-        
 
-        outContent.reset();
-        int val = list.at(2);
-        assertThat(val)
-                .withFailMessage("Expected 2 at index 2 after removing head but got %d", val)
-                .isEqualTo(2);
         // Verify "Go to next node" is not printed during removal of head
-        String expectedOutput = "Go to next node\nGo to next node\n";
+        String expectedOutput = "";
         assertThat(outContent.toString())
                 .withFailMessage("Expected no output during head removal but got %s", outContent.toString())
                 .isEqualTo(expectedOutput);
@@ -199,42 +193,6 @@ class CircularLinkedListTest {
                 .isEqualTo(2);
         assertThat(list.size())
                 .withFailMessage("Expected size 2 after removing tail but got %d", list.size())
-                .isEqualTo(2);
-        
-        outContent.reset();
-        int val = list.at(2);
-        assertThat(val)
-                .withFailMessage("Expected 1 at index 2 after removing head but got %d", val)
-                .isEqualTo(1);
-        // Verify "Go to next node" is not printed during removal of head
-        assertThat(outContent.toString())
-                .withFailMessage("Expected no output during head removal but got %s", outContent.toString())
-                .isEqualTo(expectedOutput);
-    }
-
-    @Test
-    void testListIsCircular() {
-        list.add(1);
-
-        outContent.reset(); // Clear the output content
-
-        // Verify "Go to next node" is printed during removal of tail
-        String expectedOutput = "Go to next node\nGo to next node\nGo to next node\n";
-
-        int val = list.at(3);
-        assertThat(val)
-        .withFailMessage("Expected 1 at index 3 but got %d", val)
-                .isEqualTo(1);
-
-        assertThat(outContent.toString())
-                .withFailMessage("Expected '%s' messages during tail removal but got %s", expectedOutput, outContent.toString())
-                .isEqualTo(expectedOutput);
-
-        list.add(2);
-        list.add(3);
-
-        assertThat(list.at(10))
-        .withFailMessage("Expected 2 at index 10 but got %d", list.at(10))
                 .isEqualTo(2);
     }
 }
