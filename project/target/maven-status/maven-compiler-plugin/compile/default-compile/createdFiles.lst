@@ -1,6 +1,6 @@
-DoubleLinkedListTest.class
-DoubleLinkedList$Node.class
+CircularLinkedList$Node.class
 ExerciseRunner.class
-DoubleLinkedList.class
+CircularLinkedListTest.class
+CircularLinkedList.class
 StopAfterFailureExtension.class
 LinkedList.class
