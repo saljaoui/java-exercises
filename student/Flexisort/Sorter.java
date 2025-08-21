@@ -14,17 +14,3 @@ public abstract class Sorter {
     public abstract void sort();
 }
 
-class BubbleSort extends Sorter {
-    @Override
-    public void sort() {
-        // bubble sort algorithm implementation
-        
-    }
-}
-
-class InsertionSort extends Sorter {
-    @Override
-    public void sort() {
-        // insertion sort algorithm implementation
-    }
-}

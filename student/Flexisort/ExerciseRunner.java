@@ -11,9 +11,9 @@ public class ExerciseRunner {
         System.out.println("BubbleSorted array: " + Arrays.toString(bubbleSorter.getArray()));
 
         // Test InsertionSort
-        // Sorter insertionSorter = new InsertionSort();
-        // insertionSorter.setArray(array.clone());
-        // insertionSorter.sort();
-        // System.out.println("InsertionSorted array: " + Arrays.toString(insertionSorter.getArray()));
+        Sorter insertionSorter = new InsertionSort();
+        insertionSorter.setArray(array.clone());
+        insertionSorter.sort();
+        System.out.println("InsertionSorted array: " + Arrays.toString(insertionSorter.getArray()));
     }
 }
