@@ -1,6 +1,6 @@
-Task.class
+IterativeFactorial.class
+RecursiveFactorial.class
+FactorialMasterTest.class
 ExerciseRunner.class
-TodoListTest.class
-TaskStatus.class
+Factorial.class
 StopAfterFailureExtension.class
-TodoList.class
