@@ -5,13 +5,6 @@ import java.time.format.DateTimeParseException;
 
 public class MonthlyPeriod {
     public String calculatePeriod(String startDate, String endDate) {
-        // Implementation to calculate the period between two dates in months and years
-
-        // try {
-        // DateTimeFormatter format = DateTimeFormatter.ofPattern("yyyy-MM-dd");
-        // } catch (DateTimeFormatter e) {
-        //     return "Error";
-        // }
         LocalDate date1;
         LocalDate date2;
         try {
@@ -21,12 +14,8 @@ public class MonthlyPeriod {
             return "Error";
         }
 
-
-
         Period time = Period.between(date1, date2);
 
-        // System.out.println(time.getMonths());
-        // System.out.println(time.getYears());
         int years = Math.abs(time.getYears());
 int months = Math.abs(time.getMonths());
 

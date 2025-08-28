@@ -1,4 +1,4 @@
-MonthlyPeriod.class
+AgeFinder.class
+AgeFinderTest.class
 ExerciseRunner.class
-MonthlyPeriodTest.class
 StopAfterFailureExtension.class
