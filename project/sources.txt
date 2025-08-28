@@ -1,5 +1,4 @@
+./src/main/java/DayOfWeekFinder.java
+./src/main/java/DayOfWeek_test.java
 ./src/main/java/ExerciseRunner.java
-./src/main/java/LinkedList.java
-./src/main/java/SingleLinkedList.java
-./src/main/java/SingleLinkedList_test.java
 ./src/main/java/StopAfterFailureExtension.java

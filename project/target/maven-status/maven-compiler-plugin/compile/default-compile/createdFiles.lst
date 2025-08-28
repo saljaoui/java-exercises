@@ -1,6 +1,4 @@
-SingleLinkedListTest.class
-SingleLinkedList$Node.class
+DayOfWeekTest.class
 ExerciseRunner.class
-LinkedList.class
-SingleLinkedList.class
+DayOfWeekFinder.class
 StopAfterFailureExtension.class
