@@ -1,11 +1,15 @@
 public class ExerciseRunner {
     public static void main(String[] args) {
-        RegexDirector director = new RegexDirector();
-        RegexBuilder builder = new ConcreteRegexBuilder();
+        DateFormatter df = new DateFormatter(1656374400, "DD/MM/yyyy");
+        System.out.println(df.getFormattedDate());
 
-        director.setBuilder(builder);
-        Regex regex = director.construct();
+        df.setFormat("dd.MM.yyyy");
+        System.out.println(df.getFormattedDate());
 
-        System.out.println(regex);
+        df.setDate(1672531200);
+        System.out.println(df.getFormattedDate());
+
+        df.setFormat("DD month yyyy");
+        System.out.println(df.getFormattedDate());
     }
 }

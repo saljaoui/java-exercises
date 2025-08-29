@@ -1,7 +1,4 @@
-BuilderBlueprintTest.class
-ConcreteRegexBuilder.class
-StopAfterFailureExtension.class
-RegexDirector.class
-Regex.class
-RegexBuilder.class
+DateFormatter.class
+DateFormatterTest.class
 ExerciseRunner.class
+StopAfterFailureExtension.class
